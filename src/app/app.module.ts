@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
+import { RouterModule } from '@angular/router'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -10,11 +11,17 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatIconModule } from '@angular/material/icon'
-import { MatListModule } from '@angular/material/list';
+import { MatListModule } from '@angular/material/list'
 import { FarmerInfoComponent } from './farmer-info/farmer-info.component'
+import { DataRequestComponent } from './data-request/data-request.component'
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, FarmerInfoComponent],
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    FarmerInfoComponent,
+    DataRequestComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,6 +32,10 @@ import { FarmerInfoComponent } from './farmer-info/farmer-info.component'
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    RouterModule.forRoot([
+      { path: '', component: FarmerInfoComponent },
+      { path: 'data-request', component: DataRequestComponent },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent],

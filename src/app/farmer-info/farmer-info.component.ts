@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 
 import { farmers } from '../../assets/farmer-data'
 
@@ -10,7 +11,7 @@ import { farmers } from '../../assets/farmer-data'
 export class FarmerInfoComponent implements OnInit {
   farmers = farmers
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {}
 }
