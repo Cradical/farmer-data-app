@@ -1,20 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { FarmerSelectionListComponent } from './farmer-selection-list/farmer-selection-list.component';
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { NavigationComponent } from './navigation/navigation.component'
+import { LayoutModule } from '@angular/cdk/layout'
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatButtonModule } from '@angular/material/button'
+import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatIconModule } from '@angular/material/icon'
+import { MatListModule } from '@angular/material/list';
+import { FarmerInfoComponent } from './farmer-info/farmer-info.component'
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FarmerSelectionListComponent
-  ],
+  declarations: [AppComponent, NavigationComponent, FarmerInfoComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

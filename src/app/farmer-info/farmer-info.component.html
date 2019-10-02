@@ -1,0 +1,14 @@
+<div class="farmer-info-container">
+  <div *ngFor="let farmer of farmers">
+    <div class="title">
+      <h2>{{ farmer.first_name }} {{ farmer.last_name }} Information</h2>
+    </div>
+    <div class="info-display-container">
+      <h2>Farm Infomation</h2>
+      <p>Farm Name: {{ farmer.farm_information.farm_name }}</p>
+      <p>Location: {{ farmer.location.city }}, {{ farmer.location.country }}</p>
+      <p>Region: {{ farmer.location.region }}</p>
+      <p>altitude: {{ farmer.farm_information.altitude }} meters</p>
+    </div>
+  </div>
+</div>
